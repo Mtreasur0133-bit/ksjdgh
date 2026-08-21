@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="cherri - A modern web application with advanced features" />
+  <meta name="keywords" content="cherri, web app, discord, community" />
+  <meta name="author" content="cherri" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="cherri" />
+  <meta property="og:description" content="A modern web application with advanced features" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="cherri" />
+  <meta name="twitter:description" content="A modern web application with advanced features" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" href="./assets/img/fav.png" />
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2D1B26" />
+  <title>cherri</title>
+  <script>/*<![CDATA[*/
+      window.__swRegistration = navigator.serviceWorker
+        ? navigator.serviceWorker
+            .register("./sw.js")
+            .then(function (reg) {
+              if (navigator.serviceWorker.controller) {
+                sessionStorage.removeItem("__sw_reload");
+                return reg;
+              }
+              if (sessionStorage.getItem("__sw_reload")) return reg;
+              navigator.serviceWorker.ready.then(function () {
+                if (navigator.serviceWorker.controller) return;
+                var settled = false;
+                var onCtrl = function () {
+                  settled = true;
+                  navigator.serviceWorker.removeEventListener(
+                    "controllerchange",
+                    onCtrl
+                  );
+                };
+                navigator.serviceWorker.addEventListener(
+                  "controllerchange",
+                  onCtrl
+                );
+                setTimeout(function () {
+                  navigator.serviceWorker.removeEventListener(
+                    "controllerchange",
+                    onCtrl
+                  );
+                  if (!settled && !navigator.serviceWorker.controller) {
+                    sessionStorage.setItem("__sw_reload", "1");
+                    location.reload();
+                  }
+                }, 1200);
+              });
+              return reg;
+            })
+            .catch(function (err) {
+              console.error("[sw] registration failed:", err);
+              return null;
+            })
+        : Promise.resolve(null);
+    /*]]>*/</script>
+  <script src="./scramjet/scramjet.js" defer></script>
+  <script src="./controller/controller.api.js" defer></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/luminsdk/script@4269428afb469a5c569c96674aff7613bc0e5a02/lumin.min.js"
+    integrity="sha384-wFZFrwPetKt8OuUnfq86RbcbkjT+uN7Av9Z5kLIjtxfAHobDCo59fgdb0zXafKwR"
+    crossorigin="anonymous"
+    defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7TLL7J3HN"></script>
+  <script>
+    /*<![CDATA[*/
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-N7TLL7J3HN");
+    /*]]>*/
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&amp;family=Spline+Sans:wght@300..700&amp;family=TikTok+Sans:opsz,wght@12..36,300..900&amp;family=Vend+Sans:ital,wght@0,300..700;1,300..700&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.css" />
+  <script>
+    /*<![CDATA[*/
+      window.$scramjetController = $scramjetController
+      console.log(window.$scramjetController);
+      console.log(typeof window.$scramjetController);
+    /*]]>*/
+  </script>
+  <link rel="preload" as="style" crossorigin="anonymous" href="./assets/index-DCIK1mlv.css" />
+  <link rel="stylesheet" crossorigin="anonymous" href="./assets/index-DCIK1mlv.css" />
+  <link rel="preload" as="script" href="./assets/bundle.js" />
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <script src="./assets/bundle.js"></script>
+</body>
+</html>

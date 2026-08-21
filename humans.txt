@@ -1,0 +1,14 @@
+/* TEAM */
+  Developer: cherri
+  Contact: mailto:contact@yourdomain.com
+  Twitter: @cherri
+
+/* SITE */
+  Last update: 2026/08/17
+  Language: English
+  Doctype: HTML5
+  Technologies: React, Service Workers, WebAssembly
+  Components: Single-page application
+
+/* THANKS */
+  Built with modern web technologies

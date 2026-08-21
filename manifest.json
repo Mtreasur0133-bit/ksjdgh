@@ -1,0 +1,27 @@
+{
+  "name": "cherri",
+  "short_name": "cherri",
+  "description": "A modern web application with advanced features",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2D1B26",
+  "theme_color": "#2D1B26",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/img/fav.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["social", "entertainment"],
+  "scope": "/",
+  "related_applications": []
+}
